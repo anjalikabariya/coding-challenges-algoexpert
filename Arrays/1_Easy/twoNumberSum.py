@@ -9,9 +9,17 @@
   in the array; you can't add a single integer to itself in order to obtain the
   target sum. 
   You can assume that there will be at most one pair of numbers summing up to
-  the target sum. '''
+  the target sum. 
+  
+  sample input
+  A = [3, 5, -4, 8, 11, 1, -1, 6]
+  t = 10
 
-  def twoNumberSum(array, targetSum):
+  sample output
+  [11, -1]
+  '''
+
+def twoNumberSum(array, targetSum):
     plft = 0
     prght = len(array)-1
     array.sort()
@@ -25,9 +33,3 @@
         else:
             return [array[prght], array[plft]]
     return []
-
-A = [3, 5, -4, 8, 11, 1, -1, 6]
-t = 10
-twoNumberSum(A, t)
-
-[11, -1]
